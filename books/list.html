@@ -9,8 +9,7 @@
 <body>
     <header>
         <h1>SIMPUS-Mini</h1>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -25,7 +24,12 @@
     <main>
         <section>
             <h2>Book List</h2>
-            <div class="responsiveTable">
+            <div class="search-box">
+                <label for="search-input">Search Book Title</label>
+                <input type="text" id="search-input" placeholder="Type book title...">
+            </div>
+            <p id="loading-indicator" style="display:none;">Loading data...</p>
+            <div class="table-responsive">
             <table>
                 <thead>
                     <tr>
@@ -33,6 +37,7 @@
                         <th>Author</th>
                         <th>Year</th>
                         <th>Stock</th>
+                        <th>Category</th> <!-- Added Category column -->
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -45,7 +50,7 @@
                         <td>
                             <button type="button">Edit</button>
                             <button type="button" class="btn-details">Details</button>
-                            <button type="button">Delete</button>
+                            <button type="button" class="btn-delete">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -56,7 +61,7 @@
                         <td>
                             <button type="button">Edit</button>
                             <button type="button" class="btn-details">Details</button>
-                            <button type="button">Delete</button>
+                            <button type="button" class="btn-delete">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -67,7 +72,7 @@
                         <td>
                             <button type="button">Edit</button>
                             <button type="button" class="btn-details">Details</button>
-                            <button type="button">Delete</button>
+                            <button type="button" class="btn-delete">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -78,7 +83,7 @@
                         <td>
                             <button type="button">Edit</button>
                             <button type="button" class="btn-details">Details</button>
-                            <button type="button">Delete</button>
+                            <button type="button" class="btn-delete">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -89,7 +94,7 @@
                         <td>
                             <button type="button">Edit</button>
                             <button type="button" class="btn-details">Details</button>
-                            <button type="button">Delete</button>
+                            <button type="button" class="btn-delete">Delete</button>
                         </td>
                     </tr>
 
@@ -102,7 +107,7 @@
                         <td>
                             <button type="button">Edit</button>
                             <button type="button" class="btn-details">Details</button>
-                            <button type="button">Delete</button>
+                            <button type="button" class="btn-delete">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -113,7 +118,7 @@
                         <td>
                             <button type="button">Edit</button>
                             <button type="button" class="btn-details">Details</button>
-                            <button type="button">Delete</button>
+                            <button type="button" class="btn-delete">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -124,7 +129,7 @@
                         <td>
                             <button type="button">Edit</button>
                             <button type="button" class="btn-details">Details</button>
-                            <button type="button">Delete</button>
+                            <button type="button" class="btn-delete">Delete</button>
                         </td>
                     </tr>
                 </tbody>
@@ -134,7 +139,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 3</p>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 6</p>
     </footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/list-loader.js"></script>
+    <script src="../assets/js/books-loader.js"></script>
 </body>
 </html>

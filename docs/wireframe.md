@@ -5,7 +5,6 @@ Sub-CPMK: Design the UI/UX of the application (project).
 The existing pages (Home, Add/List Books, Add/List Members — Jobsheets 1-3) don't yet include Login, Officer Dashboard, and Borrowing/Return features. This document designs wireframes for those pages before implementation starting in Jobsheet 5 and onwards.
 
 ## Actors
-
 - **Guest**: can only view the book catalog (Home, Book List) without signing in.
 - **Officer**: signs in to access all CRUD features and borrowing transactions.
 
@@ -100,7 +99,6 @@ The existing pages (Home, Add/List Books, Add/List Members — Jobsheets 1-3) do
 ```
 
 ## Consistency with Existing Design
-
 - Accent colors, navbar typography, and table/card styles follow `assets/css/style.css` built in Jobsheets 2-3.
 - Navbar will add a **Borrowing** menu and login status indicator (officer name / Logout button) starting implementation in Jobsheet 10.
 - Edge cases to handle during implementation: books with zero stock cannot be selected in borrowing forms; members with overdue fees are validated in Jobsheet 12 (independent assignment).

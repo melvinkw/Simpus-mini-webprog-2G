@@ -219,7 +219,30 @@ footer {
     display: none;
     font-size: 1.6rem;
     color: #fff;
+    background: none;
+    border: none;
     cursor: pointer;
+}
+
+/* ===== Validation Error Message ===== */
+.error {
+    display: block;
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* ===== Search Box ===== */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
 }
 
 /* ===== Responsive Breakpoints ===== */
@@ -228,6 +251,13 @@ footer {
 @media (max-width: 900px) {
     main section:nth-of-type(2) {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Smartphone and below */
+    @media (max-width: 480px) {
+        main section:nth-of-type(2) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -242,14 +272,18 @@ footer {
     }
 
     header nav {
-        display: none;
+        display: block;
+        max-height: 0;
+        overflow: hidden;
         width: 100%;
         order: 3;
-        margin-top: 1rem;
+        margin-top: 0;
+        transition: max-height 0.3s ease, margin-top 0.3s ease;
     }
 
-    .nav-toggle:checked ~ nav {
-        display: block;
+    header nav.nav-open {
+        max-height: 300px;
+        margin-top: 1rem;
     }
 
     header nav ul {
