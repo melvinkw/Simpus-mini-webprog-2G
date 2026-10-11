@@ -1,48 +1,50 @@
-# Jobsheet 1 Documentation — SIMPUS-Mini
+# Jobsheet 2 Documentation — Basic CSS3 Styling
 
-This documentation was written specifically for students who are new to
-HTML/CSS. Every code file in jobsheet-01 is explained line by line: which
-tag is used, why it is used, and what it is good for in the real world.
+This documentation continues on from the
+[jobsheet-01 documentation](../../jobsheet-01/Documentation/README.md) and
+is aimed at students who are new to HTML/CSS. If you don't yet understand
+the basic HTML structure (`header`, `nav`, `main`, `table`, `form`, etc.),
+you should read the jobsheet-01 documentation first before continuing here.
+
+## What's New in Jobsheet 2?
+
+As noted in this jobsheet's [README.md](../README.md), the **HTML
+structure hasn't changed at all** from jobsheet-01 — only one new file was
+added, `assets/css/style.css`, along with one new `<link rel="stylesheet">`
+line on every HTML page. So all of this jobsheet 2 documentation focuses on
+**CSS**: what CSS is, how it works, and a line-by-line explanation of the
+`style.css` file.
 
 ## Table of Contents
 
-1. [Basic Concepts Used in This Jobsheet](01-basic-concepts.md)
-2. [Explanation of `index.html` (Home Page)](02-index-html.md)
-3. [Explanation of `books/list.html` (Book List)](03-books-list-html.md)
-4. [Explanation of `books/add.html` (Add Book Form)](04-books-add-html.md)
-5. [Explanation of `members/list.html` (Member List)](05-members-list-html.md)
-6. [Explanation of `members/add.html` (Add Member Form)](06-members-add-html.md)
-7. [Summary & Further Exercises](07-summary-exercises.md)
-
-## About This Program
-
-Jobsheet 1 builds the initial skeleton of the **SIMPUS-Mini** application,
-a mini library system that can manage **book** and **member** data.
-At this stage the application **cannot yet save real data** — all the data
-in the tables is still dummy (sample) data written manually in HTML, and
-the forms are not processed anywhere yet. The focus of this jobsheet is
-purely on:
-
-- Web page structure using **HTML5 semantics** (`header`, `nav`, `main`,
-  `section`, `article`, `footer`), instead of plain `div`s everywhere.
-- Naming the `id` and `name` attributes on forms, which will be reused
-  later when learning CSS (jobsheet 2) and JavaScript/backend (the
-  following jobsheet).
+1. [Basic Concepts of CSS](01-basic-css-concepts.md)
+2. [What Changed in the HTML Files?](02-html-file-changes.md)
+3. [CSS: Reset & Base Body Style](03-css-reset-and-body.md)
+4. [CSS: Header & Navbar with Flexbox](04-css-header-navbar-flexbox.md)
+5. [CSS: `main` & `section` Layout](05-css-main-and-section.md)
+6. [CSS: Statistic Cards with CSS Grid](06-css-grid-stat-cards.md)
+7. [CSS: Table Styling](07-css-table.md)
+8. [CSS: Form Styling](08-css-form.md)
+9. [CSS: Footer](09-css-footer.md)
+10. [Summary & Further Exercises](10-summary-and-exercises.md)
 
 ## Folder Structure
 
 ```
-jobsheet-01/
-├── index.html            # Home page
+jobsheet-02/
+├── index.html
+├── assets/
+│   └── css/
+│       └── style.css      # New file in this jobsheet
 ├── books/
-│   ├── list.html          # Book list table (static)
-│   └── add.html           # Add book form (not yet processed)
+│   ├── list.html
+│   └── add.html
 ├── members/
-│   ├── list.html          # Member list table (static)
-│   └── add.html           # Add member form (not yet processed)
-├── README.md              # Short jobsheet summary (from the lecturer)
+│   ├── list.html
+│   └── add.html
+├── README.md
 └── Documentation/         # This documentation folder
 ```
 
 Please read in order starting from number 1 so the concepts connect, or
-jump straight to the file you want to understand.
+jump straight to the CSS section you want to understand.
