@@ -75,7 +75,7 @@ main section:nth-of-type(2) h2 {
 
 main section:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for 4 cards */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -222,6 +222,24 @@ footer {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+/* ===== Flash Message ===== */
+.flash {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
 /* ===== Validation Error Message ===== */

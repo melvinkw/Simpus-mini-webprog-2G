@@ -10,9 +10,9 @@ function initNavToggle() {
 }
 
 // ===== Delete confirmation (front-end only, not yet sent to the server) =====
-// Uses event delegation on document because table rows are now
-// rendered dynamically via fetch (see books.js/members.js), so the
-// .btn-delete button might not exist yet at DOMContentLoaded.
+// Uses event delegation on document because table rows are rendered by PHP
+// (see books/list.php and members/list.php), so a .btn-delete button might
+// not exist yet at DOMContentLoaded.
 function initDeleteConfirm() {
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".btn-delete");
@@ -66,9 +66,9 @@ function removeError(input) {
 function initFormValidation() {
     console.log("[DEBUG] initFormValidation DIPANGGIL");
 
-    const form = document.getElementById("form-add");
+    const form = document.getElementById("add-form");
     if (!form) {
-        console.log("[DEBUG] Form #form-add TIDAK DITEMUKAN");
+        console.log("[DEBUG] Form #add-form TIDAK DITEMUKAN");
         return;
     }
 
@@ -118,22 +118,6 @@ function initFormValidation() {
             }
         }
 
-        // ---- ISBN (debug) ----
-        const isbn = form.querySelector("[name='isbn']");
-        console.log("[DEBUG] Cek ISBN, value =", isbn ? isbn.value : "element tidak ada");
-
-        if (isbn && isbn.value.trim() !== "") {
-            console.log("[DEBUG] ISBN diisi, akan cek regex");
-            if (!/^[0-9-]+$/.test(isbn.value)) {
-                console.log("[DEBUG] ISBN INVALID → alert");
-                alert("ISBN hanya boleh berisi digit (0-9) dan tanda hubung (-).\n\nContoh: 978-602-1234");
-                removeError(isbn);
-                e.preventDefault();
-                return;
-            }
-            console.log("[DEBUG] ISBN VALID");
-            removeError(isbn);
-        }
 
         // ---- Kalau ada error dari field lain ----
         if (!valid) {

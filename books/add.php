@@ -1,30 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIMPUS-Mini | Add Book</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>SIMPUS-Mini</h1>
-        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="list.html">Book List</a></li>
-                <li><a href="add.html">Add Book</a></li>
-                <li><a href="../members/list.html">Member List</a></li>
-                <li><a href="../members/add.html">Add Member</a></li> <!-- Added navigation links for members -->
-            </ul>
-        </nav>
-    </header>
+<?php
+$flash = $_SESSION['flash'] ?? null;
+unset($_SESSION['flash']);
 
-    <main>
+$page_title = "Add Book";
+include __DIR__ . '/../includes/header.php';
+
+?>
         <section>
             <h2>Add Book</h2>
-            <form id="form-add">
+
+            <?php if ($flash): ?>
+                <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['message']; ?></p>
+            <?php endif; ?>
+
+            <form id="add-form" method="post" action="process_add.php">
                 <p>
                     <label for="title">Title</label><br>
                     <input type="text" id="title" name="title" required>
@@ -58,11 +47,4 @@
                 </p>
             </form>
         </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 6</p>
-    </footer>
-    <script src="../assets/js/app.js"></script>
-</body>
-</html>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
