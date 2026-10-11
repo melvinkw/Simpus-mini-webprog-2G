@@ -1,16 +1,15 @@
 # Jobsheet 1 — HTML5 Semantic Skeleton
 
-Sub-CPMK: Building a web page structure with HTML5 semantics.
+Sub-CPMK: Build a responsive display.
 
-## Contents of this stage
-- `index.html` — Home page with a summary of statistics (dummy).
-- `books/list.html` — static book list table (5 dummy rows).
-- `books/add.html` — add book form (not yet processed).
-- `members/list.html` — static member list table (independent exercise).
-- `members/add.html` — add member form (independent exercise).
+## Changes from Jobsheet 2
+- Add `<meta name="viewport">` on all pages.
+- Navbar: hamburger menu uses pure CSS **checkbox hack** technique (`input[type=checkbox] + label`), active on screens ≤480px.
+- Table is wrapped in `<div class="table-responsive">` to enable horizontal scrolling on narrow screens.
+- Add media query in `style.css`: grid of stat cards 3 → 2 → 1 columns following tablet/mobile breakpoints.
 
 ## How to run
-Open `index.html` directly in a browser (no server needed yet).
+Open `index.html` in your browser, test with DevTools responsive mode at 3 breakpoints (mobile ≤480px, tablet ~768px, desktop ≥1024px).
 
 ## Notes
-- No CSS/JS yet — the focus is purely on the semantic structure (`header`, `nav`, `main`, `section`, `article`, `footer`) and the `name`/`id` attribute naming that will be reused in the next jobsheet.
+- Hamburger in this jobsheet is still pure CSS (checkbox hack). In Jobsheet 5 it will be replaced with JavaScript-based toggle.

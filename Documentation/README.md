@@ -1,50 +1,46 @@
-# Jobsheet 2 Documentation — Basic CSS3 Styling
+# Jobsheet 4 Documentation
 
-This documentation continues on from the
-[jobsheet-01 documentation](../../jobsheet-01/Documentation/README.md) and
-is aimed at students who are new to HTML/CSS. If you don't yet understand
-the basic HTML structure (`header`, `nav`, `main`, `table`, `form`, etc.),
-you should read the jobsheet-01 documentation first before continuing here.
+This folder contains the complete learning materials for Jobsheet 4: UI/UX Design.
 
-## What's New in Jobsheet 2?
+## Contents
 
-As noted in this jobsheet's [README.md](../README.md), the **HTML
-structure hasn't changed at all** from jobsheet-01 — only one new file was
-added, `assets/css/style.css`, along with one new `<link rel="stylesheet">`
-line on every HTML page. So all of this jobsheet 2 documentation focuses on
-**CSS**: what CSS is, how it works, and a line-by-line explanation of the
-`style.css` file.
+1. **[01-basic-uiux-design-concepts.md](01-basic-uiux-design-concepts.md)**
+   - Difference between UI (User Interface) and UX (User Experience)
+   - Why design before coding
+   - Introduction to wireframes and user flows
 
-## Table of Contents
+2. **[02-how-to-read-wireframe.md](02-how-to-read-wireframe.md)**
+   - ASCII art wireframe conventions and symbol meanings
+   - Example Login page wireframe
+   - Example Officer Dashboard wireframe
+   - How to translate wireframe symbols to HTML elements
 
-1. [Basic Concepts of CSS](01-basic-css-concepts.md)
-2. [What Changed in the HTML Files?](02-html-file-changes.md)
-3. [CSS: Reset & Base Body Style](03-css-reset-and-body.md)
-4. [CSS: Header & Navbar with Flexbox](04-css-header-navbar-flexbox.md)
-5. [CSS: `main` & `section` Layout](05-css-main-and-section.md)
-6. [CSS: Statistic Cards with CSS Grid](06-css-grid-stat-cards.md)
-7. [CSS: Table Styling](07-css-table.md)
-8. [CSS: Form Styling](08-css-form.md)
-9. [CSS: Footer](09-css-footer.md)
-10. [Summary & Further Exercises](10-summary-and-exercises.md)
+3. **[03-user-flow-borrowing-returning.md](03-user-flow-borrowing-returning.md)**
+   - User flow for borrowing books with business rules
+   - User flow for returning books
+   - Why recording flows at design time matters
 
-## Folder Structure
+4. **[04-actors-and-authorization.md](04-actors-and-authorization.md)**
+   - Concept of actors (user types): Guest and Officer
+   - Current pages represent Guest actor
+   - New pages represent Officer actor
+   - Introduction to authorization concept
 
-```
-jobsheet-02/
-├── index.html
-├── assets/
-│   └── css/
-│       └── style.css      # New file in this jobsheet
-├── books/
-│   ├── list.html
-│   └── add.html
-├── members/
-│   ├── list.html
-│   └── add.html
-├── README.md
-└── Documentation/         # This documentation folder
-```
+5. **[05-code-connection.md](05-code-connection.md)**
+   - How new design reuses existing CSS and components
+   - Navbar and Flexbox flexibility
+   - Stat cards reuse across pages
+   - Edge cases noted at design time
 
-Please read in order starting from number 1 so the concepts connect, or
-jump straight to the CSS section you want to understand.
+6. **[06-summary-and-exercises.md](06-summary-and-exercises.md)**
+   - Summary table of all concepts
+   - Core takeaways to remember
+   - Optional exercises to deepen understanding
+
+## Key Point
+
+This jobsheet contains **no code changes** — it's entirely about **planning and design**. The focus is learning to think through user needs and system architecture before writing code, which is a critical professional skill in software development.
+
+## Quick Start
+
+Start with [01-basic-uiux-design-concepts.md](01-basic-uiux-design-concepts.md) to understand why design matters, then explore the wireframes in `../docs/wireframe.md` alongside these chapters.
