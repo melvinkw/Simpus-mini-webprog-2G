@@ -1,11 +1,9 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+session_start();
 
 // Prefix relative to this project's root (not the domain root) — so
 // /assets, /index.php, etc. stay correct even when the project is
-// accessed via a subfolder (e.g. dp2026.test/kode-praktikum/jobsheet-07/),
+// accessed via a subfolder (e.g. dp2026.test/kode-praktikum/jobsheet-08/),
 // not just via a vhost whose document root points directly at this folder.
 $__jobsheetRoot = dirname(__DIR__);
 $__scriptDir = dirname($_SERVER['SCRIPT_FILENAME']);

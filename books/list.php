@@ -1,10 +1,12 @@
 <?php
 $page_title = "Book List";
 include __DIR__ . '/../includes/header.php';
+require __DIR__ . '/../includes/connection.php';
 
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
-$books = $_SESSION['books'] ?? [];
+
+$books = $pdo->query("SELECT * FROM books ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
 ?>
         <section>
             <h2>Book List</h2>

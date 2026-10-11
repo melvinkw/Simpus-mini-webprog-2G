@@ -1,10 +1,12 @@
 <?php
 $page_title = "Member List";
 include __DIR__ . '/../includes/header.php';
+require __DIR__ . '/../includes/connection.php';
 
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
-$members = $_SESSION['members'] ?? [];
+
+$members = $pdo->query("SELECT * FROM members ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
 ?>
         <section>
             <h2>Member List</h2>

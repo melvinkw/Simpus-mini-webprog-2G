@@ -1,9 +1,10 @@
 <?php
 $page_title = "Home";
 include __DIR__ . '/includes/header.php';
+require __DIR__ . '/includes/connection.php';
 
-$totalBooks = count($_SESSION['books'] ?? []);
-$totalMembers = count($_SESSION['members'] ?? []);
+$totalBooks = $pdo->query("SELECT COUNT(*) FROM books")->fetchColumn();
+$totalMembers = $pdo->query("SELECT COUNT(*) FROM members")->fetchColumn();
 ?>
       <section>
         <h2>Welcome to Mini Library System</h2>

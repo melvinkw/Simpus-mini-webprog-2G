@@ -1,10 +1,9 @@
 <?php
-$flash = $_SESSION['flash'] ?? null;
-unset($_SESSION['flash']);
-
 $page_title = "Add Book";
 include __DIR__ . '/../includes/header.php';
 
+$flash = $_SESSION['flash'] ?? null;
+unset($_SESSION['flash']);
 ?>
         <section>
             <h2>Add Book</h2>
